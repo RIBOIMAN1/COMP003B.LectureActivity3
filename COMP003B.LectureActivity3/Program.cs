@@ -1,3 +1,10 @@
+/*
+    Author: Riley Benson
+    Course: COMP-003B: ASP.NET Core
+    Faculty: Jonathan Cruz
+    Purpose: Demonstrates routing, model binding, and validation in ASP.NET Core MVC.
+*/
+
 namespace COMP003B.LectureActivity3
 {
     public class Program
@@ -26,7 +33,8 @@ namespace COMP003B.LectureActivity3
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
+			// Conventional routing defaults to the Home controller and Index
+			app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
